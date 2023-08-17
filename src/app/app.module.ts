@@ -8,6 +8,7 @@ import { SpeedDialModule } from 'primeng/speeddial';
 import { TimelineModule } from 'primeng/timeline';
 import { KnobModule } from 'primeng/knob';
 import { TagModule } from 'primeng/tag';
+import { TooltipModule } from 'primeng/tooltip';
 
 import { AppComponent } from './app.component';
 import { PersonalInfoComponent } from './content/personal-info/personal-info.component';
@@ -35,7 +36,8 @@ import { AchievementsComponent } from './content/achievements/achievements.compo
     SpeedDialModule,
     TimelineModule,
     KnobModule,
-    TagModule
+    TagModule,
+    TooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
