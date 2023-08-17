@@ -1,0 +1,16 @@
+<p-timeline [value]="events" align="alternate">
+    <ng-template pTemplate="content" let-event>
+        <p-card>
+            <div style="display: flex; align-items: start; text-align: start;">
+                <div style="flex: 3;">
+                    <i class="pi pi-building" style="padding: 10px;"></i><span><b>School/ University: </b>{{ event.school_university }}</span><br>
+                    <i class="pi pi-book" style="padding: 10px;"></i><span><b>Course: </b>{{ event.course }}</span><br>
+                    <i class="pi pi-calendar" style="padding: 10px;"></i><span><b>Duration: </b>{{ event.duration }}</span><br>
+                </div>
+                <div style="flex: 1;align-self: center;text-align: center;">
+                    <p-knob [(ngModel)]="event.gpa_percentage" [max]="100" valueTemplate="{value}%" [readonly]="true"></p-knob>
+                </div>
+            </div>
+        </p-card>
+    </ng-template>
+</p-timeline>

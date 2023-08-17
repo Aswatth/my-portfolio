@@ -1,0 +1,8 @@
+:host ::ng-deep .p-card{
+    transition: 0.2s;
+}
+
+:host ::ng-deep .p-card:hover{
+    transform: scale(1.03);
+    border: solid lightskyblue 0.5px;
+}

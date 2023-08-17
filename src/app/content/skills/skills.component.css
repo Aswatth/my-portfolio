@@ -1,0 +1,11 @@
+:host ::ng-deep .p-tag{
+    margin: 5px;
+}
+
+/* :host ::ng-deep .p-tag:hover{
+    background-color: teal;
+} */
+
+.content{
+    margin-bottom: 10px;
+}

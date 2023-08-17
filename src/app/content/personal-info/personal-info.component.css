@@ -1,0 +1,24 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+}
+.grid-item{
+    padding: 10px;
+}
+
+:host ::ng-deep .p-button{
+    background-color: transparent;
+    border-color: black;
+    color: black;
+}
+
+:host ::ng-deep .p-button:hover{
+    transform: scale(1.2);
+    background-color: transparent;
+    border-color: black;
+}
+
+:host ::ng-deep .p-button-icon{
+    color: black
+}

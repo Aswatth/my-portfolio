@@ -1,0 +1,10 @@
+<ul>
+    <ng-container *ngFor="let achievement of achievements; let i = index">
+        <div style="padding: 10px;">
+            <i class="pi pi-star-fill" *ngIf="i % 2 == 0"></i>
+            <i class="pi pi-star" *ngIf="i % 2 != 0"></i>
+            <span> {{achievement.achievement}} </span> <p-tag>{{ achievement.year }}</p-tag>
+            <hr>
+        </div>
+    </ng-container>
+</ul>

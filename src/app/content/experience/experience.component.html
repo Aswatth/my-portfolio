@@ -1,0 +1,30 @@
+<p-timeline [value]="events" align="alternate">
+    <ng-template pTemplate="content" let-event>
+        <p-card>
+            <div style="display: flex;">
+                <div style="flex: 3;align-content: start;text-align: start;">
+                    <i class="pi pi-building" style="padding: 10px;"></i><span><b>Company: </b>{{ event.company }}</span><br>
+                    <i class="pi pi-user" style="padding: 10px;"></i><span><b>Designation: </b>{{ event.designation }}</span>
+                </div>
+                <div style="flex: 1;text-align: center;align-self: center; background-color: rgb(94, 94, 255);padding: 10px;">
+                    <h3 style="display: inline;color: white;">{{ event.duration }}</h3>
+                </div>
+            </div>
+            <ul>
+                <ng-container *ngFor="let role of event.role">
+                    <li style="text-align: start;">{{role}}</li>
+                </ng-container>
+            </ul>
+        </p-card>
+    </ng-template>
+</p-timeline>
+<!-- <div class="card" (click)="toggleCard()">
+    <div class="card-inner" [@flip]="isFlipped ? 'flipped' : 'notFlipped'">
+      <div class="card-front">
+        <p-card><i class="pi pi-github"></i>Front</p-card>
+      </div>
+      <div class="card-back">
+        <p-card>Back</p-card>
+      </div>
+    </div>
+  </div>       -->

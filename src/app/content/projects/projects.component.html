@@ -1,0 +1,20 @@
+<div class="grid-container">
+    <ng-container *ngFor="let project of projects">
+        <div class="grid-item">
+            <p-card>
+                <h1 style="display: inline;">{{ project.name }}</h1>
+                <span>
+                    <div style="display: flex;justify-content: flex-end;">
+                        <a [attr.href]="project.link"><i class="pi pi-github"></i></a>
+                    </div>
+                </span>
+                <hr>
+                <div style="align-items: end;">
+                    <ng-container *ngFor="let i of project.about">
+                        <p-tag [value]="i" [rounded]="true"></p-tag>
+                    </ng-container>
+                </div>
+            </p-card>
+        </div>
+    </ng-container>
+</div>
