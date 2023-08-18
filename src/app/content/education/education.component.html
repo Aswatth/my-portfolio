@@ -1,16 +1,21 @@
 <p-timeline [value]="events" align="alternate">
     <ng-template pTemplate="content" let-event>
         <p-card>
-            <div style="display: flex; align-items: start; text-align: start;">
-                <div style="flex: 3;">
+            <div style="display: flex;">
+                <div style="flex: 3;align-content: start;text-align: start;">
                     <i class="pi pi-building" style="padding: 10px;"></i><span><b>School/ University: </b>{{ event.school_university }}</span><br>
                     <i class="pi pi-book" style="padding: 10px;"></i><span><b>Course: </b>{{ event.course }}</span><br>
-                    <i class="pi pi-calendar" style="padding: 10px;"></i><span><b>Duration: </b>{{ event.duration }}</span><br>
+                    <i class="pi pi-book" style="padding: 10px;"></i><span><b>Score: </b>{{ event.score }}</span><br>
                 </div>
-                <div style="flex: 1;align-self: center;text-align: center;">
-                    <p-knob [(ngModel)]="event.gpa_percentage" [max]="100" valueTemplate="{value}%" [readonly]="true"></p-knob>
+                <div style="flex: 1;text-align: center;align-self: center; background-color: #3B91F9;padding: 10px;">
+                    <h3 style="display: inline;color: white;">{{ event.duration }}</h3>
                 </div>
             </div>
+            <ul>
+                <ng-container *ngFor="let role of event.role">
+                    <li style="text-align: start;">{{role}}</li>
+                </ng-container>
+            </ul>
         </p-card>
     </ng-template>
 </p-timeline>

@@ -1,19 +1,26 @@
 <div class="grid-container">
     <ng-container *ngFor="let project of projects">
         <div class="grid-item">
-            <p-card>
+            <p-card pBadge value="{{project.year}}">
                 <h1 style="display: inline;">{{ project.name }}</h1>
                 <span>
-                    <div style="display: flex;justify-content: flex-end;">
-                        <a [attr.href]="project.link" target="_blank"><i class={{project.icon}}></i></a>
+                    <div style="display: flex;">
+                        <div style="flex: 3;">
+                            <ng-container *ngFor="let i of project.tech">
+                                <p-tag [value]="i" [rounded]="true"></p-tag>
+                            </ng-container>
+                        </div>
+                        <div style="flex: 1;text-align: end;">
+                            <a [attr.href]="project.link" target="_blank"><i class={{project.icon}}></i></a>
+                        </div>
                     </div>
                 </span>
                 <hr>
-                <div style="align-items: end;">
-                    <ng-container *ngFor="let i of project.about">
-                        <p-tag [value]="i" [rounded]="true"></p-tag>
+                <ul>
+                    <ng-container *ngFor="let about of project.about">
+                        <li>{{about}}</li>
                     </ng-container>
-                </div>
+                </ul>
             </p-card>
         </div>
     </ng-container>

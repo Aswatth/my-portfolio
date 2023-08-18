@@ -5,5 +5,5 @@
 :host ::ng-deep .p-card:hover{
     transform: scale(1.03);
     /* transform: rotateX(180deg); */
-    border: solid lightskyblue 0.5px;
+    border: solid #3B91F9 0.5px;
 }
